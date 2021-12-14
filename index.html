@@ -43,6 +43,15 @@
             center: { lng: -122.4250517166777, lat: 37.7220580327421 }
         });
 
+        // Add the control to the map.
+        map.addControl(
+            new MapboxGeocoder({
+                accessToken: mapboxgl.accessToken,
+                mapboxgl: mapboxgl
+            })
+        );
+
+
 
         map.on('load', function () {
 
